@@ -8,8 +8,8 @@
 ###################
 PROFILE:
   ## git informations
-  email:    'user@example.com'
-  realname: 'FULL NAME'
+  email:    'www3838438@yahoo.com'
+  realname: 'www3838438'
 
   ## default shell
   shell:    '/bin/zsh'
@@ -25,7 +25,7 @@ PROFILE:
 ###################
 VM:
   # Name of VM
-  name: 'DEV-VM'
+  name: 'ubuntu-1804-docker-dev'
 
   # Base image
   # You can use nearly any Ubuntu 16.04 vagrant base image.
@@ -34,7 +34,7 @@ VM:
   # Images:
   # -> box-cutter/ubuntu1604
   #
-  image: 'bento/ubuntu-16.04'
+  image: 'ubuntu-1804-base'
 
   # Enable GUI mode (show screen of VM)
   gui: false
@@ -65,7 +65,7 @@ VM:
   #
   data:
     # Image size in GB
-    size: 160
+    size: 99
 
     # Filesystem of image
     # -> ext4, btrfs or xfs
@@ -113,7 +113,7 @@ VM:
   workaround:
     # Fallback ssh connection (https://github.com/mitchellh/vagrant/issues/5186)
     # -> Authentication issues? Workaround:
-    useSshPasswordAuth: false
+    useSshPasswordAuth: true
 
   # ---------------------------------------------
   # VirtualBox settings
@@ -158,7 +158,7 @@ PROVISION:
   gem: []
 
   # python pip packages
-  pip: []
+  pip: [pipenv]
 
 ###################
 # Docker features
